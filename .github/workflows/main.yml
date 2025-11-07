@@ -29,3 +29,6 @@ jobs:
        uses: actions/setup-node@v3
        with:
          node-version: '16'
+
+     - name: Use secret
+     run: echo "Using secret: ${{ secrets.API_KEY }}"
