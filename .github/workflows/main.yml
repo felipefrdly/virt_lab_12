@@ -1,34 +1,17 @@
 name: CI Example
+
 on:
   push:
     branches:
-      - main # Run this workflow when changes are pushed to the main branch
+      - main  # Run this workflow when changes are pushed to the main branch
+
 jobs:
   build:
-    runs-on: ubuntu-latest # Use an Ubuntu virtual machine
- 
+    runs-on: ubuntu-latest  # Use an Ubuntu virtual machine
+
     steps:
-     - name: Checkout code
-       uses: actions/checkout@v3 # Check out the repository code
-     
-     - name: Run a simple script
-       run: echo "Hello, GitHub Actions!"
-       
-     - name: Run tests
-       run: |
-        echo "Running tests..."
-        python -m unittest discover
+      - name: Checkout code
+        uses: actions/checkout@v3  # Check out the repository code
 
-     - name: Build the application
-       run: |
-         echo "Building the app..."
-         npm install
-         npm run build
-
-     - name: Set up Node.js
-       uses: actions/setup-node@v3
-       with:
-         node-version: '16'
-
-     - name: Use secret
-       run: echo "Using secret: ${{ secrets.API_KEY }}"
+      - name: Run a simple script
+        run: echo "Hello, GitHub Actions!"
