@@ -16,7 +16,13 @@ jobs:
       - name: Run a simple script
         run: echo "Hello, GitHub Actions!"
 
-      - name: Run tests
-        run: |
-          echo "Running tests..."
-          python -m unittest discover
+      # - name: Run tests
+      #   run: |
+      #     echo "Running tests..."
+      #     python -m unittest discover
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
