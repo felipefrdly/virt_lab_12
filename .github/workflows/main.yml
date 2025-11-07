@@ -31,4 +31,4 @@ jobs:
          node-version: '16'
 
      - name: Use secret
-     run: echo "Using secret: ${{ secrets.API_KEY }}"
+       run: echo "Using secret: ${{ secrets.API_KEY }}"
